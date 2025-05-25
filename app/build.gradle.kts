@@ -1,6 +1,6 @@
 plugins {
     application
-    id("com.github.ben-manes.versions") version "0.52.0"
+    alias(libs.plugins.versions)
 }
 
 application {
@@ -14,12 +14,10 @@ repositories {
     mavenCentral()
 }
 
-
 dependencies {
-    implementation("info.picocli:picocli:4.7.7")
-
-    testImplementation(platform("org.junit:junit-bom:5.12.2"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation(libs.picocli)
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
 }
 
 tasks.test {
