@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     implementation(libs.picocli)
+    implementation(libs.jackson.databind)
     testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)
 }
