@@ -1,6 +1,6 @@
 plugins {
     application
-    id("io.github.ben-manes.versions") version "0.64.0"
+    alias(libs.plugins.versions)
 }
 
 group = "hexlet.code"
@@ -13,4 +13,5 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.picocli)
 }
