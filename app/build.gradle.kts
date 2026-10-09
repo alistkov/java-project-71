@@ -14,4 +14,5 @@ repositories {
 
 dependencies {
     implementation(libs.picocli)
+    implementation(libs.databind)
 }
