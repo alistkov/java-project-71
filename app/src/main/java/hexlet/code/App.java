@@ -24,11 +24,15 @@ public class App implements Callable<Integer> {
     private String format;
 
     @Override
-    public Integer call() throws Exception {
-        var result = Differ.generate(filePath1, filePath2, format);
-        System.out.println(result);
-
+    public Integer call() {
+        try {
+            var result = Differ.generate(filePath1, filePath2, format);
+            System.out.println(result);
+        } catch (Exception ex) {
+            System.out.println("Something went wrong. Check file paths or format.");
+        }
         return 0;
+
     }
 
     public static void main(String[] args) {

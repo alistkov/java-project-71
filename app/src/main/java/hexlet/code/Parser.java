@@ -6,7 +6,7 @@ import tools.jackson.databind.ObjectMapper;
 import java.util.Map;
 
 public class Parser {
-    public static Map<String, Object> parse(String content, String format) throws Exception {
+    public static Map<String, Object> parse(String content, String format) {
         ObjectMapper mapper = switch (format) {
             case "json" -> new ObjectMapper();
             default -> throw new IllegalArgumentException("Unknown format: " + format);
