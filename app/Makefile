@@ -1,4 +1,4 @@
-.PHONY: build
+.PHONY: build lint test
 
 install-dist:
 	make clean && ./gradlew installDist
@@ -20,3 +20,6 @@ lint-fix:
 
 test:
 	./gradlew test
+
+build:
+	./gradlew clean build

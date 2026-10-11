@@ -5,8 +5,8 @@ import java.nio.file.Paths;
 import java.util.Map;
 
 public class Differ {
-    public static String generate(String path1, String path2) throws Exception {
-        return Differ.generate(path1, path2, "stylish");
+    public static String generate(String filePath1, String filePath2) throws Exception {
+        return generate(filePath1, filePath2, "stylish");
     }
 
     public static String generate(String filePath1, String filePath2, String format)
