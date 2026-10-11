@@ -17,3 +17,6 @@ lint:
 
 lint-fix:
 	./gradlew spotlessApply
+
+test:
+	./gradlew test
