@@ -3,6 +3,7 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     application
+    jacoco
     alias(libs.plugins.versions)
     alias(libs.plugins.spotless)
 }
@@ -56,6 +57,36 @@ tasks.test {
         showStackTraces = true
     }
 }
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+}
+
+tasks.test { finalizedBy(tasks.jacocoTestReport) }
+
+tasks.jacocoTestCoverageVerification {
+    dependsOn(tasks.jacocoTestReport)
+    violationRules {
+        rule {
+            limit {
+                counter = "INSTRUCTION"
+                value = "COVEREDRATIO"
+                minimum = "0.80".toBigDecimal()
+            }
+        }
+    }
+    classDirectories.setFrom(
+        sourceSets.main.get().output.asFileTree.matching {
+            exclude("hexlet/code/App.class")
+        }
+    )
+}
+
+tasks.check { dependsOn(tasks.jacocoTestCoverageVerification) }
 
 java {
     toolchain {
