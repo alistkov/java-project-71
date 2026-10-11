@@ -9,7 +9,8 @@ public class Differ {
         return Differ.generate(path1, path2, "stylish");
     }
 
-    public static String generate(String filePath1, String filePath2, String format) throws Exception {
+    public static String generate(String filePath1, String filePath2, String format)
+            throws Exception {
         var content1 = getFileContent(filePath1);
         var content2 = getFileContent(filePath2);
         var diffTree = DiffTree.build(content1, content2);
@@ -17,7 +18,7 @@ public class Differ {
         return Formatter.render(diffTree, format);
     }
 
-    private static Map<String,Object> getFileContent(String filePath) throws Exception {
+    private static Map<String, Object> getFileContent(String filePath) throws Exception {
         var normalizePath = Paths.get(filePath).toAbsolutePath().normalize();
         return Parser.parse(Files.readString(normalizePath), getFormat(filePath));
     }

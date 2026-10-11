@@ -3,7 +3,8 @@ package hexlet.code;
 import java.util.*;
 
 public class DiffTree {
-    public static ArrayList<DiffNode> build(Map<String, Object> content1, Map<String, Object> content2) {
+    public static ArrayList<DiffNode> build(
+            Map<String, Object> content1, Map<String, Object> content2) {
         var result = new ArrayList<DiffNode>();
         var keys = new HashSet<>(content1.keySet());
         keys.addAll(content2.keySet());

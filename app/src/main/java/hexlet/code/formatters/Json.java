@@ -2,21 +2,19 @@ package hexlet.code.formatters;
 
 import hexlet.code.DiffNode;
 import hexlet.code.Status;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import tools.jackson.core.util.DefaultIndenter;
 import tools.jackson.core.util.DefaultPrettyPrinter;
 import tools.jackson.databind.json.JsonMapper;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class Json {
     public static String render(ArrayList<DiffNode> diffTree) {
-        DefaultPrettyPrinter printer = new DefaultPrettyPrinter()
-                .withArrayIndenter(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
-        var mapper = JsonMapper.builder()
-                .defaultPrettyPrinter(printer)
-                .build();
+        DefaultPrettyPrinter printer =
+                new DefaultPrettyPrinter()
+                        .withArrayIndenter(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
+        var mapper = JsonMapper.builder().defaultPrettyPrinter(printer).build();
         var result = new ArrayList<>();
 
         for (var node : diffTree) {
