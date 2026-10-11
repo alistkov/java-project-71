@@ -1,3 +1,5 @@
+.PHONY: build
+
 install-dist:
 	make clean && ./gradlew installDist
 
@@ -15,6 +17,3 @@ lint:
 
 lint-fix:
 	./gradlew spotlessApply
-
-update-deps:
-	./gradlew versionCatalogUpdate
