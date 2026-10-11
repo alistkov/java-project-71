@@ -1,6 +1,7 @@
 plugins {
     application
     alias(libs.plugins.versions)
+    alias(libs.plugins.spotless)
 }
 
 group = "hexlet.code"
@@ -15,4 +16,15 @@ repositories {
 dependencies {
     implementation(libs.picocli)
     implementation(libs.databind)
+}
+
+spotless {
+    java {
+        importOrder()
+        googleJavaFormat().aosp()
+        formatAnnotations()
+        removeUnusedImports()
+        leadingTabsToSpaces(4)
+        endWithNewline()
+    }
 }

@@ -1,10 +1,12 @@
 [plugins]
 versions = { id = "io.github.ben-manes.versions", version.ref = "versions-plugin" }
+spotless = { id ="com.diffplug.spotless", version.ref = "spotless" }
 
 [versions]
 versions-plugin = "0.64.0"
 picocli = "4.7.7"
 jackson-databind = "3.2.3"
+spotless = "8.10.4"
 
 [libraries]
 picocli = { module = "info.picocli:picocli", version.ref ="picocli"}

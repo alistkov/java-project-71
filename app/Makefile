@@ -10,3 +10,11 @@ check-updates:
 clean:
 	./gradlew clean
 
+lint:
+	./gradlew spotlessCheck
+
+lint-fix:
+	./gradlew spotlessApply
+
+update-deps:
+	./gradlew versionCatalogUpdate
