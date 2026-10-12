@@ -21,7 +21,7 @@ public class DiffTree {
                 result.add(new DiffNode(key, Status.DELETED, valueInFirst, null));
             } else if (!hasInFirst && hasInSecond) {
                 result.add(new DiffNode(key, Status.ADDED, null, valueInSecond));
-            } else if (valueInFirst.equals(valueInSecond)) {
+            } else if (Objects.deepEquals(valueInFirst, valueInSecond)) {
                 result.add(new DiffNode(key, Status.UNCHANGED, valueInFirst, valueInSecond));
             } else {
                 result.add(new DiffNode(key, Status.CHANGED, valueInFirst, valueInSecond));
