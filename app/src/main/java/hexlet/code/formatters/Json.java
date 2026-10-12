@@ -16,7 +16,7 @@ public class Json {
                 new DefaultPrettyPrinter()
                         .withArrayIndenter(DefaultIndenter.SYSTEM_LINEFEED_INSTANCE);
         var mapper = JsonMapper.builder().defaultPrettyPrinter(printer).build();
-        var result = new HashMap<String,Map<String, Object> >();
+        var result = new HashMap<String, Map<String, Object>>();
 
         for (var node : diffTree) {
             Map<String, Object> mapTree = new LinkedHashMap<>();

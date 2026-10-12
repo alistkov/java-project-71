@@ -2,7 +2,6 @@ package hexlet.code.formatters;
 
 import hexlet.code.DiffNode;
 import hexlet.code.Status;
-
 import java.util.ArrayList;
 
 public class Plain {
@@ -13,17 +12,14 @@ public class Plain {
             var status = node.status();
 
             if (status.equals(Status.DELETED)) {
-                result.append("Property '")
-                        .append(node.key())
-                        .append("' was removed")
-                        .append("\n");
+                result.append("Property '").append(node.key()).append("' was removed").append("\n");
             } else if (status.equals(Status.ADDED)) {
                 result.append("Property '")
                         .append(node.key())
                         .append("' was added with value: ")
                         .append(renderValue(node.newValue()))
                         .append("\n");
-            } else if (status.equals(Status.CHANGED)){
+            } else if (status.equals(Status.CHANGED)) {
                 result.append("Property '")
                         .append(node.key())
                         .append("' was updated. From ")
