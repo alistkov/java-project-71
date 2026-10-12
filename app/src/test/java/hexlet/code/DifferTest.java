@@ -67,4 +67,19 @@ public class DifferTest {
                         StandardCharsets.UTF_8);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testPlainFormat() throws Exception {
+        var actual =
+                Differ.generate(
+                        "./src/test/resources/hexlet/code/nested1.json",
+                        "./src/test/resources/hexlet/code/nested2.json", "plain");
+        var expected =
+                Files.readString(
+                        Paths.get("./src/test/resources/hexlet/code/expected/expected-plain.txt")
+                                .toAbsolutePath()
+                                .normalize(),
+                        StandardCharsets.UTF_8);
+        assertEquals(expected, actual);
+    }
 }
