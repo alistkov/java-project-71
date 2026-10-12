@@ -21,5 +21,8 @@ lint-fix:
 test:
 	./gradlew test
 
+test-coverage:
+	./gradlew jacocoTestCoverageVerification
+
 build:
 	./gradlew clean build
