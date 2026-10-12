@@ -22,4 +22,19 @@ public class DifferTest {
                         StandardCharsets.UTF_8);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testYml() throws Exception {
+        var actual =
+                Differ.generate(
+                        "./src/test/resources/hexlet/code/file1.yaml",
+                        "./src/test/resources/hexlet/code/file2.yaml");
+        var expected =
+                Files.readString(
+                        Paths.get("./src/test/resources/hexlet/code/expected/expected.txt")
+                                .toAbsolutePath()
+                                .normalize(),
+                        StandardCharsets.UTF_8);
+        assertEquals(expected, actual);
+    }
 }

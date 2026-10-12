@@ -20,6 +20,7 @@ repositories {
 dependencies {
     implementation(libs.picocli)
     implementation(libs.databind)
+    implementation(libs.jackson.dataformat.yaml)
 }
 
 spotless {
