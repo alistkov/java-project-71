@@ -6,7 +6,7 @@ public enum Status {
     CHANGED("changed"),
     UNCHANGED("unchanged");
 
-    public final String label;
+    private final String label;
 
     private Status(String label) {
         this.label = label;
