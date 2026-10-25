@@ -13,10 +13,10 @@ public class DifferTest {
         var actual =
                 Differ.generate(
                         "./src/test/resources/hexlet/code/plain1.json",
-                        "./src/test/resources/hexlet/code/plain-json2.json");
+                        "./src/test/resources/hexlet/code/plain2.json");
         var expected =
                 Files.readString(
-                        Paths.get("./src/test/resources/hexlet/code/expected/expected.txt")
+                        Paths.get("./src/test/resources/hexlet/code/expected/expected-stylish.txt")
                                 .toAbsolutePath()
                                 .normalize(),
                         StandardCharsets.UTF_8);
@@ -31,7 +31,7 @@ public class DifferTest {
                         "./src/test/resources/hexlet/code/plain2.yaml");
         var expected =
                 Files.readString(
-                        Paths.get("./src/test/resources/hexlet/code/expected/expected.txt")
+                        Paths.get("./src/test/resources/hexlet/code/expected/expected-stylish.txt")
                                 .toAbsolutePath()
                                 .normalize(),
                         StandardCharsets.UTF_8);
@@ -89,7 +89,7 @@ public class DifferTest {
         var actual =
                 Differ.generate(
                         "./src/test/resources/hexlet/code/plain1.json",
-                        "./src/test/resources/hexlet/code/plain-json2.json",
+                        "./src/test/resources/hexlet/code/plain2.json",
                         "json");
         var expected =
                 Files.readString(
