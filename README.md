@@ -111,17 +111,17 @@ Property 'verbose' was added with value: true
 
 | Format  | Files | Recording                                                       |
 | ------- | ----- | --------------------------------------------------------------- |
-| stylish | JSON  | <a href="https://asciinema.org/a/<>" target="_blank">Watch</a>  |
-| plain   | JSON  | <a href="https://asciinema.org/a/<>>" target="_blank">Watch</a> |
-| json    | JSON  | <a href="https://asciinema.org/a/<>>" target="_blank">Watch</a> |
+| stylish | JSON  | <a href="https://asciinema.org/a/Lt5ubNxxYJFfSPjq" target="_blank">Watch</a>  |
+| plain   | JSON  | <a href="https://asciinema.org/a/S4wIFxqJrjXoQ94E" target="_blank">Watch</a> |
+| json    | JSON  | <a href="https://asciinema.org/a/CbjaYobqZwlHAmob" target="_blank">Watch</a> |
 
 ### Comparing Nested Structures
 
 | Format  | Files | Recording                                                       |
 | ------- | ----- | --------------------------------------------------------------- |
-| stylish | JSON  | <a href="https://asciinema.org/a/<>" target="_blank">Watch</a>  |
-| stylish | YML   | <a href="https://asciinema.org/a/<>" target="_blank">Watch</a>  |
-| plain   | JSON  | <a href="https://asciinema.org/a/<>>" target="_blank">Watch</a> |
-| plain   | YML   | <a href="https://asciinema.org/a/<>>" target="_blank">Watch</a> |
-| json    | JSON  | <a href="https://asciinema.org/a/<>>" target="_blank">Watch</a> |
-| json    | YML   | <a href="https://asciinema.org/a/<>>" target="_blank">Watch</a> |
+| stylish | JSON  | <a href="https://asciinema.org/a/JQmZUW6Qs5TZzsxL" target="_blank">Watch</a>  |
+| stylish | YML   | <a href="https://asciinema.org/a/G0ObAIHDK3W70m3H" target="_blank">Watch</a>  |
+| plain   | JSON  | <a href="https://asciinema.org/a/leD8pBXKdqU7ayTU" target="_blank">Watch</a> |
+| plain   | YML   | <a href="https://asciinema.org/a/JFFihisszdtDhsoo" target="_blank">Watch</a> |
+| json    | JSON  | <a href="https://asciinema.org/a/dBhAIYOmlsMxSBFL" target="_blank">Watch</a> |
+| json    | YML   | <a href="https://asciinema.org/a/PMsbxlUJPCyBhJPs" target="_blank">Watch</a> |
